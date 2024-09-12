@@ -1,0 +1,101 @@
+
+.outer-container{
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    min-width: 350px;
+    min-height: 700px;
+    margin: 10px;
+    background-image: url('./images/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: hsl(229, 24%, 87%);
+    font-family: url('/assets/fonts/Ubuntu-Bold.ttf');
+}
+.full-container{
+    display: inline-flex;
+    width: 1440px;
+    height: 750px;
+    border: 1px solid black;
+    align-items: center;
+    background-color: hsl(231, 100%, 99%);
+
+    
+}
+.select-step{
+    display: block;
+    position: relative;
+    top: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+   
+}
+.step-name{
+    color: white;
+    margin-left: 50px;
+    margin-top: 0px;
+    padding: 1px;
+}
+span{
+    margin-left: 18px;
+}
+.round-button {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    min-width: 15px;
+    min-height: 15px;
+    width: 35px;
+    height: 35px;
+    color: hsl(231, 100%, 99%);
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    border:  1px solid white;
+  }
+  .round-button.active{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    font-weight: 600;
+  }
+  .right-container{
+    width: 900px ;
+    height: 600px;
+    border: 1px solid black;
+    display: block;
+    align-items: center;
+    margin-left: 100px;
+  
+
+  }
+  .next-step{
+    display: block;
+    position: absolute;
+    background-color: hsl(228, 100%, 84%);
+    color: white;
+    margin-top:320px ;
+    margin-left: 900px;  
+    
+  }
+.prev-step{
+    display: block;
+    position: absolute;
+    background-color: hsl(228, 100%, 84%);
+    color: white;
+    margin-top:320px ;
+    margin-left: 100px;  
+    
+}
+  .input{
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px hsl(231, 11%, 63%);
+  }
+  .plan-container{
+    display: inline-flex;
+    
+  }
