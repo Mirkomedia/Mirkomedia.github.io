@@ -1,9 +1,6 @@
 import {  useState } from "react";
-import { Sidebar } from "./Components/Sidebar";
 import "./Styles.scss";
-import { PersonalInfo } from "./Components/PersonalInfo";
-export const App = () => {
-  
+import {MultiStepForm} from "./Components/MultiStepForm"  
 /*const  multiStepForm = () =>{
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -17,39 +14,28 @@ export const App = () => {
 
 }
 */
-const handleChange = (e) =>{
-  const name = e.target.name;
-  const value = e.target.value;
-  setStep((prev) => {
-    return{...prev, [name]: value}
- })
-  console.log(name, value);
-};
 
-const nextStep = () => setStep(step + 1);
+export const App = () => {
+  const [step, setStep] = useState(1);
+const nextStep = () => {step < 5 ? setStep(step + 1) : null};
 ;
-const prevStep = () => setStep(step - 1);
+const prevStep = () => {step > 1 ? setStep(step - 1): null};
 
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phoneNumber: "",
+  plan:"",
+  interval: "",
+  addOns:"",
+})
 
 const step1 = ({})
   return (
     
     <div className="full-container">
-   
-
-  
-      <Sidebar/>
-      <footer>
-      <button className="next-step" onClick={nextStep}>Next Step</button>
-      <button  className="prev-step" onClick={prevStep}>Go Back</button>
-      </footer>
-      <PersonalInfo/>
-     
-     
-     
+     <MultiStepForm/>
     </div>
     
   )
 }
-
-

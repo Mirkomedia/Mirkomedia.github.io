@@ -68,7 +68,7 @@ span{
     display: block;
     align-items: center;
     margin-left: 100px;
-  
+    text-align: center;
 
   }
   .next-step{
@@ -97,5 +97,135 @@ span{
   }
   .plan-container{
     display: inline-flex;
+   text-align: left;
+    border: 1px solid black;
+    margin-top: 20px;
     
   }
+.plan-box{
+  width: 100px;
+  height: 150px;
+  display: block;
+  position: relative;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+ 
+}
+.monthly-yearly {
+  appearance: none;
+  display: inline-block;
+  font-size: 20px; /* 1 */
+  height: 1em;
+  width: 2em;
+  background: #BDB9A6;
+  border-radius: 1em;
+}
+
+.monthly-yearly-container {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.add-ons-container{
+  display:block;
+  position: relative;
+  align-items: left;
+  text-align: left;
+}
+.graytext{
+  margin-left: 30px;
+  color: hsl(231, 11%, 63%);
+}
+.add-on{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  display: relative;
+}
+.add-on-checkbox{
+  display: inline;
+  padding: 15px;
+  margin-top: 15px;
+}
+.price{
+  color:   hsl(243, 100%, 62%);
+}
+.doublecheck-container{
+  border: 1px solid black;
+  width: 60%;
+  margin-left:20% ;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  margin-top: 50px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:hsl(243, 100%, 62%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.thanksIcon{
+  margin-top: 200px;
+}
+.thanksTxt{
+  margin-left: 250px;
+  margin-right: 250px;
+}
