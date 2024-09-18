@@ -3,7 +3,7 @@ import React from 'react'
 export const ThankYou = () => {
   return (
     <div>
-      <div className='right-container'>
+      <div className='right-container thanks'>
         
     
       <img src="./src/images/icon-thank-you.svg" alt="red check" className='thanksIcon'/>

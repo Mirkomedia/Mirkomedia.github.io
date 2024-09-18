@@ -1,11 +1,8 @@
-import { useState } from "react"
+export const Sidebar = ({step, setStep}) => {
+  
+  const setStep1 = () => {setStep(step = 1)};
+  
 
-export const Sidebar = () => {
-    const [isActive] = useState(2);
-
-   
-    const [step] = useState(1);
-   
   return (
   
 
@@ -13,7 +10,7 @@ export const Sidebar = () => {
         <div className="select-step">
         
      <button className={step === 1 ?"round-button active" : 
-     "round-button inactive"} >1</button>
+     "round-button inactive"} onClick={setStep1}>1</button>
     <span>Step 1</span>
      <p className="step-name">YOUR INFO</p>
        </div>
@@ -34,7 +31,7 @@ export const Sidebar = () => {
      </div>
 
        <div className="select-step">
-       <button className={step === 4 ?"round-button active" : 
+       <button className={step >= 4 ?"round-button active" : 
      "round-button inactive"} >4</button>
         <span>Step 4</span>
       <p className="step-name">SUMMARY</p>

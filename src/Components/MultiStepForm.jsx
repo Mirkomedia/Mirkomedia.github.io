@@ -5,6 +5,7 @@ import {PickAddOns} from "./PickAddOns"
 import {FinishingUp} from "./FinishingUp"
 import {ThankYou} from "./ThankYou"
 import { Sidebar } from "./Sidebar";
+
 export const MultiStepForm = () => {
     const [step, setStep] = useState(1);
   const nextStep = () => {step < 5 ? setStep(step + 1) : null};
@@ -16,8 +17,10 @@ export const MultiStepForm = () => {
     email: "",
     phoneNumber: "",
     plan:"",
-    interval: "",
-    addOns:"",
+    interval: "monthly",
+    onlineService:"",
+    largerStorage: "",
+    customizableProfile: ""
   })
   
   const handleChange = (e) =>{
@@ -27,6 +30,7 @@ export const MultiStepForm = () => {
         return {...prev,[name]:value}
     })
   };
+  
   const step1 = ({})
     return (
       
@@ -34,17 +38,18 @@ export const MultiStepForm = () => {
      
   
       
-         <Sidebar/>
+         <Sidebar step={step}/>
         <footer>
-        <button className="next-step" onClick={nextStep}>Next Step</button>
-        <button  className="prev-step" onClick={prevStep}>Go Back</button>
+        {step < 4 && <button className="next-step" onClick={nextStep}>Next Step</button>}
+        {step >1 && step <5 &&  <button  className="prev-step" onClick={prevStep}>Go Back</button>}
+        {step === 4 && <button type="submit" className="confirm" onClick={nextStep} >Confirm</button>}
         </footer>
         
-        {step === 1 && <PersonalInfo nextStep={nextStep} />}
-        {step === 2 && <SelectYourPlan nextStep={nextStep} prevStep={prevStep} />}
-        {step === 3 && <PickAddOns nextStep={nextStep} prevStep={prevStep} />}
-        {step === 4 && <FinishingUp nextStep={nextStep} prevStep={prevStep}  />}
-        {step === 5 && <ThankYou nextStep={nextStep} prevStep={prevStep}  />}
+        {step === 1 && <PersonalInfo nextStep={nextStep} formData={formData} handleChange={handleChange}/>}
+        {step === 2 && <SelectYourPlan nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} />}
+        {step === 3 && <PickAddOns nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData}/>}
+        {step === 4 && <FinishingUp nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange}setFormData={setFormData} />}
+        {step === 5 && <ThankYou nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange}setFormData={setFormData} />}
        
        
        
