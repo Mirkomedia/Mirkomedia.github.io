@@ -51,7 +51,7 @@ export const SelectYourPlan = ({formData, setFormData,}) => {
   
     <label className="switch">
           
-    <input onChange={handleInterval}  type="checkbox" id="interval"  />
+    <input onChange={handleInterval}  type="checkbox" id="interval" checked={formData.interval === 'monthly' ? false : true} />
      <span  className="slider round"></span>
   </label>
   

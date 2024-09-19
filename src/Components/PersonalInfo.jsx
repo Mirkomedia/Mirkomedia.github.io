@@ -2,7 +2,10 @@ import {  useState } from "react";
 
 export const PersonalInfo = ({formData, handleChange}) => {
 
-
+const validateValues = (inputValues)=>{
+  
+  
+}
 
   return (
     <form action="" method="get">
@@ -12,9 +15,9 @@ export const PersonalInfo = ({formData, handleChange}) => {
         <p>Name</p>
     <input className="Name-field input" type="text" placeholder="Known computer legend Elmeri" onChange={handleChange} name="name" value={formData.name}/>
     <p>Email Address</p>
-    <input className="email input" type="email" placeholder="e.g. stephenking@lorem.com" required onChange={handleChange} name="email" value={formData.email}/>
+    <input className="email input" type="email" placeholder="e.g. stephenking@lorem.com" required:true onChange={handleChange} name="email" value={formData.email}/>
     <p>Phone Number</p>
-    <input className="phone-number input" type="text" placeholder="e.g. +123456789"  required onChange={handleChange} name="phoneNumber" value={formData.phoneNumber}/>
+    <input className="phone-number input" type="text" placeholder="e.g. +123456789"  onChange={handleChange} name="phoneNumber" value={formData.phoneNumber}/>
 
     
     

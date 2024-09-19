@@ -25,7 +25,6 @@ export const MultiStepForm = () => {
   
   const handleChange = (e) =>{
     const {name, value} = e.target;
-    console.log(name, value);
     setFormData((prev) =>{
         return {...prev,[name]:value}
     })
@@ -38,7 +37,7 @@ export const MultiStepForm = () => {
      
   
       
-         <Sidebar step={step}/>
+         <Sidebar step={step} nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} setStep={{setStep}}/>
         <footer>
         {step < 4 && <button className="next-step" onClick={nextStep}>Next Step</button>}
         {step >1 && step <5 &&  <button  className="prev-step" onClick={prevStep}>Go Back</button>}

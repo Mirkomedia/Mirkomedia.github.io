@@ -15,11 +15,22 @@ export const FinishingUp = ({formData}) => {
    {formData.interval === 'monthly' ?  planPrice ='$15/mo': planPrice ='$150/yr'}
  }
   const onlineService = formData.onlineService
+  let onlineServicePrice 
+  if (formData.onlineService === 'online service'){
+    {formData.interval === 'monthly' ? onlineServicePrice = '$1/mo': onlineServicePrice = '$10/yr' }
+  } 
   const largerStorage = formData.largerStorage
+  let largerStoragePrice
+  if(formData.largerStorage === 'largerStorage'){
+    {formData.interval === 'monthly' ? largerStoragePrice = '$2/mo' : largerStoragePrice= '$20/yr'}
+  }
   const customizableProfile = formData.customizableProfile
-  const onlineServicePrice = '1$'
-  const largerStoragePrice = '2$'
-  const customizableProfilsePrice = '2$'
+  let customizableProfilsePrice
+  if (formData.customizableProfile === 'customProfile') {
+    {formData.interval === 'monthly' ? customizableProfilsePrice = '$2/mo' : customizableProfilsePrice= '$20/yr'}
+    
+  }
+ 
   return (
     <div>
       <div className='right-container'>
