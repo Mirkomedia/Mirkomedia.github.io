@@ -15,7 +15,7 @@ const validateValues = (inputValues)=>{
         <p>Name</p>
     <input className="Name-field input" type="text" placeholder="Known computer legend Elmeri" onChange={handleChange} name="name" value={formData.name}/>
     <p>Email Address</p>
-    <input className="email input" type="email" placeholder="e.g. stephenking@lorem.com" required:true onChange={handleChange} name="email" value={formData.email}/>
+    <input className="email input" type="email" placeholder="e.g. stephenking@lorem.com"  onChange={handleChange} name="email" value={formData.email}/>
     <p>Phone Number</p>
     <input className="phone-number input" type="text" placeholder="e.g. +123456789"  onChange={handleChange} name="phoneNumber" value={formData.phoneNumber}/>
 

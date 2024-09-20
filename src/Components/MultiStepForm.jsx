@@ -5,6 +5,7 @@ import {PickAddOns} from "./PickAddOns"
 import {FinishingUp} from "./FinishingUp"
 import {ThankYou} from "./ThankYou"
 import { Sidebar } from "./Sidebar";
+import {PersonalInfo2} from "./PersonalInfo2"
 
 export const MultiStepForm = () => {
     const [step, setStep] = useState(1);
@@ -44,7 +45,8 @@ export const MultiStepForm = () => {
         {step === 4 && <button type="submit" className="confirm" onClick={nextStep} >Confirm</button>}
         </footer>
         
-        {step === 1 && <PersonalInfo nextStep={nextStep} formData={formData} handleChange={handleChange}/>}
+        {step === 1 && <PersonalInfo2 nextStep={nextStep} formData={formData} handleChange={handleChange} onChange={handleChange}setFormData={setFormData} />} 
+   {/*     {step === 1 && <PersonalInfo nextStep={nextStep} formData={formData} handleChange={handleChange}/>}*/}
         {step === 2 && <SelectYourPlan nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} />}
         {step === 3 && <PickAddOns nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData}/>}
         {step === 4 && <FinishingUp nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange}setFormData={setFormData} />}
