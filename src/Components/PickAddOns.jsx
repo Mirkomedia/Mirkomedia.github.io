@@ -27,15 +27,17 @@ const handleOnlineService = () =>{
  console.log(formData)
   return (
     <div className='right-container'>
-      <h1>Pick addOns</h1>
-      <p>Add-ons help encance your gaming experience.</p>
+      <h1>Pick add-ons</h1>
+      <p className='graytext'>Add-ons help enhance your gaming experience.</p>
      <div className='add-ons-container'>
       <div
        className={`add-on ${formData.onlineService === 'online service' ? 'active' : ''}`}>
       <input type="checkbox"   id='online-service-checkbox'className='add-on-checkbox'
         onClick={()=>handleOnlineService()}
        
-        checked={formData.onlineService === 'online service' ? true : false} />Online Service
+        checked={formData.onlineService === 'online service' ? true : false} />
+        <span>Online Service</span>
+       
         <p className='graytext'>Acces to multiplayer games <span className='price'
         >{formData.interval === 'monthly' ? '+2$/mo' : '+10$/yr'}</span></p>
       </div>

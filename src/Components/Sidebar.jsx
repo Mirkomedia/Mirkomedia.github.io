@@ -11,7 +11,7 @@ export const Sidebar = ({step, setStep}) => {
         
      <button className={step === 1 ?"round-button active" : 
      "round-button inactive"} onClick={setStep1}>1</button>
-    <span>Step 1</span>
+    <span >Step 1</span>
      <p className="step-name">YOUR INFO</p>
        </div>
     

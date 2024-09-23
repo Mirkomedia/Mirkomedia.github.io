@@ -1,10 +1,17 @@
-
+body{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(231, 100%, 99%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .outer-container{
     display: block;
     padding: 10px;
-    border: 1px solid black;
-    min-width: 350px;
-    min-height: 700px;
+    border: 1px solid white;
+    min-width: 250px;
+    min-height: 500px;
     margin: 10px;
     background-image: url('./images/bg-sidebar-desktop.svg');
     background-position: center;
@@ -15,12 +22,13 @@
 }
 .full-container{
     display: inline-flex;
-    width: 1240px;
-    height: 750px;
-    border: 1px solid black;
+    width: 880px;
+    height: 550px;
+    border: 1px solid white;
     align-items: center;
-    background-color: hsl(231, 100%, 99%); 
+    background-color: white; 
     border-radius: 10px;
+    margin: 50px;
 }
 .select-step{
     display: block;
@@ -37,9 +45,7 @@
     margin-top: 0px;
     padding: 1px;
 }
-span{
-    margin-left: 18px;
-}
+
 .round-button {
     align-items: center;
     border: 1px solid white;
@@ -61,12 +67,12 @@ span{
     font-weight: 600;
   }
   .right-container{
-    width: 700px ;
-    height: 600px;
-    border: 1px solid black;
+    width: 530px ;
+    height: 550px;
+    border: 1px solid white;
     display: block;
     align-items: center ;
-    margin-left: 100px;
+    margin-left: 50px;
     text-align: left;
 
   }
@@ -80,8 +86,8 @@ span{
     position: absolute;
     background-color: hsl(214, 93%, 18%);
     color: white;
-    margin-top:310px ;
-    margin-left: 700px;  
+    margin-top:210px ;
+    margin-left: 400px;  
     cursor: pointer;
     padding: 10px 15px 10px 15px;
     border-radius: 8px;
@@ -92,35 +98,35 @@ span{
     position: absolute;
     background-color: inherit;
     color:  hsl(231, 11%, 63%);
-    margin-top:320px ;
+    margin-top:220px ;
     margin-left: 100px;  
     cursor: pointer;
     border: none;
+}
+.prev-step:hover{
+  color:hsl(214, 93%, 18%) ;
+  font-weight: 600
 }
 .confirm{
   display: block;
   position: absolute;
   background-color:hsl(243, 100%, 62%);
   color: white;
-  margin-top:310px ;
-  margin-left: 700px;  
+  margin-top:210px ;
+  margin-left: 400px;  
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   border-radius: 8px;
   
 }
-  .input{
-    width: 50%;
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px hsl(231, 11%, 63%);
-  }
+
   .plan-container{
     display: inline-flex;
     text-align: left;
-    border: 1px solid black;
+    border: 1px transparent white;
     margin-top: 20px;
     align-items: center;
+   
 
   }
 .plan-box{
@@ -128,13 +134,17 @@ span{
   height: 150px;
   display: block;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid gray;
   padding: 10px;
   margin: 10px;
+  border-radius: 8px;
  
 }
+.plan-box:hover{
+  border: 2px solid gray;
+}
 .plan-box.active{
-  border: 2px solid red
+  border: 2px solid gray
 }
 .monthly-yearly {
   appearance: none;
@@ -164,21 +174,27 @@ span{
 }
 .graytext{
   color: hsl(231, 11%, 63%);
+  display: block;
+  font-size: 16px;
 }
 
 .add-on{
-  border: 1px solid black;
-  padding: 10px;
-  margin: 5px;
-  display: relative;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 10px;
+  display: -ms-flexbox;
+  border-radius: 8px;
+  align-items: center;
 }
 .add-on.active{
-  border: 2px solid red;
+  border: 2px solid gray;
 }
 .add-on-checkbox{
-  display: inline;
+  display: relative;
   padding: 15px;
-  margin-top: 15px;
+  margin-top: 5px;
+  height: 18px;
+  width: 18px;
 }
 .price{
   color:   hsl(243, 100%, 62%);
@@ -253,20 +269,53 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 .thanksIcon{
-  margin-top: 200px;
+  margin-top: 150px;
+  
 }
 .thanksTxt{
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .errorMessage{
   font-size: 12px;
   color: red;
   margin-left: 180px;
- display: none;
+ //display: none;
  border: none  !important;
 }
-.input:invalid  {
+
+span{
+  margin-left: 18px;
+}
+.formInput{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input{
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.errorMessage{
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+  position: absolute;
+  margin-left: 295px;
+
+}
+.input-container{
+  margin-top: 35px;
+}
+input:invalid[focused="true"]{
   border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ .errorMessage{
   display: block;
 }

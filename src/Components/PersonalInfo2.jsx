@@ -1,7 +1,7 @@
-import {  useState } from "react";
+
 import { FormInput } from "./Subcomponents/FormInput";
 
-export const PersonalInfo2 = ({formData, handleChange,setFormData}) => {
+export const PersonalInfo2 = ({formData, handleChange}) => {
 
 /*
     const onChange = (e) =>{
@@ -59,7 +59,7 @@ console.log(formData)
     <div className="right-container">
         <h1>Personal Info</h1>
          <p className="graytext">Please provide your name, email address and phone number</p>
-        
+        <div className="input-container">
         {input.map((input)=>(
          <FormInput  
          key={input.id} {...input} 
@@ -69,7 +69,7 @@ console.log(formData)
     
      
     
-   
+    </div>
     </div>
     </form>
   )
