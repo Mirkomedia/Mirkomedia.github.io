@@ -1,11 +1,8 @@
 import {  useState } from "react";
 
-export const PersonalInfo = ({formData, handleChange}) => {
+export const PersonalInfo = ({formData, handleChange,step}) => {
 
-const validateValues = (inputValues)=>{
-  
-  
-}
+console.log(step)
 
   return (
     <form action="" method="get">

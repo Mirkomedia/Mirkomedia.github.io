@@ -1,5 +1,6 @@
 import {  useState } from "react";
 import "./Styles.scss";
+import "./MobileStyles.scss"
 import {MultiStepForm} from "./Components/MultiStepForm"  
 
 
@@ -10,7 +11,7 @@ export const App = () => {
 
   return (
     
-    <div className="full-container">
+    <div>
      <MultiStepForm/>
     </div>
     

@@ -1,12 +1,11 @@
-import React from 'react'
-
-export const FinishingUp = ({formData}) => {
+export const FinishingUp = ({formData, step, setStep,}) => {
   const selectedPlan = formData.plan
   const interval = formData.interval
   const name = formData.name
   const email = formData.email
   const phoneNumber = formData.phoneNumber
   let planPrice 
+console.log(step)
   if(formData.plan === 'Arcade'){
     {formData.interval === 'monthly'?  planPrice = '$9/mo':planPrice = '$90/yr'}
  }else if(formData.plan === 'Advanced'){
@@ -14,25 +13,54 @@ export const FinishingUp = ({formData}) => {
  }else if(formData.plan === 'Pro'){
    {formData.interval === 'monthly' ?  planPrice ='$15/mo': planPrice ='$150/yr'}
  }
+
   const onlineService = formData.onlineService
   let onlineServicePrice 
   if (formData.onlineService === 'online service'){
     {formData.interval === 'monthly' ? onlineServicePrice = '$1/mo': onlineServicePrice = '$10/yr' }
-  } 
+  } else{
+    onlineServicePrice= ''
+  }
+
   const largerStorage = formData.largerStorage
   let largerStoragePrice
   if(formData.largerStorage === 'largerStorage'){
     {formData.interval === 'monthly' ? largerStoragePrice = '$2/mo' : largerStoragePrice= '$20/yr'}
   }
+  else{
+    largerStoragePrice = ''
+  }
+
   const customizableProfile = formData.customizableProfile
   let customizableProfilsePrice
   if (formData.customizableProfile === 'customProfile') {
-    {formData.interval === 'monthly' ? customizableProfilsePrice = '$2/mo' : customizableProfilsePrice= '$20/yr'}
-    
+    {formData.interval === 'monthly' ? customizableProfilsePrice = '$'+2+'/mo' : customizableProfilsePrice= '$20/yr'}
+   }else{
+    customizableProfilsePrice = ''
+   }
+
+  function extractNumber(string) {
+    const regex = /(\d+)/;
+    const match = string.match(regex);
+    return match ? parseInt(match[1], 10) : 0;
+
   }
- 
+  
+  const setStep2 = () => {
+    if (step === 4) {
+      setStep(step = 2);
+
+    }}
+
+   
+
+const totalPrice = extractNumber(customizableProfilsePrice) + extractNumber(largerStoragePrice) + extractNumber(planPrice) + extractNumber(onlineServicePrice)
+
+
+//  const planPriceFr = parseFloat(planPrice.slice(1,-1))
+  //console.log(planPriceFr)
   return (
-    <div>
+
       <div className='right-container'>
        <h1>Finishing-up</h1>
         <p className='graytext'>Double-check everything looks OK before confirming.</p>
@@ -47,39 +75,29 @@ export const FinishingUp = ({formData}) => {
         <tr id='phonenumber'>
           <th>{phoneNumber}</th>
         </tr>
-        <tr id='selected-plan'>
-          <th>
+        <tr className='selected-plan' >
+          <th >
         {selectedPlan}({interval})
-        </th>
-        <th>{planPrice}</th>
+          </th>
+        <th className='price' >{planPrice}</th>
         </tr>
-        <tr id='change-link'>change</tr>
+        <tr className="change graytext" onClick={setStep2}>Change</tr>
         <tr id='online-service'>
          <th>{onlineService}</th> 
-         <th>{onlineServicePrice}</th>
+         <th className='price onServicePrice' >{onlineServicePrice}</th>
         </tr>
         <tr id='larger-storage'>
          <th>{largerStorage}</th> 
-         <th>{largerStoragePrice}</th>
+         <th className='price' >{largerStoragePrice}</th>
         </tr>
         <tr id="customizable-profile">
           <th>{customizableProfile}</th>
-          <th>{customizableProfilsePrice}</th>
+          <th className='price' >{customizableProfilsePrice}</th>
         </tr>
-        <tr>
-          <th>Total ({interval}) dynamic price display</th>
-          <th></th>
-      
-        </tr>
-    
-    
-
-    
-
          </tbody>
        </table>
+       <p>Total ({interval}) <span className='price total'>${totalPrice}{formData.interval === 'monthly' ? '/mo' : '/yr'}</span> </p>
       </div>
-    
-    </div>
+
   )
 }

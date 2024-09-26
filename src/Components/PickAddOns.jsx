@@ -24,37 +24,49 @@ const handleOnlineService = () =>{
           ...formData,customizableProfile : isChecked ? 'customProfile' : ''
         })
       }
+  
  console.log(formData)
   return (
     <div className='right-container'>
       <h1>Pick add-ons</h1>
       <p className='graytext'>Add-ons help enhance your gaming experience.</p>
+   
      <div className='add-ons-container'>
-      <div
-       className={`add-on ${formData.onlineService === 'online service' ? 'active' : ''}`}>
-      <input type="checkbox"   id='online-service-checkbox'className='add-on-checkbox'
-        onClick={()=>handleOnlineService()}
-       
-        checked={formData.onlineService === 'online service' ? true : false} />
-        <span>Online Service</span>
-       
-        <p className='graytext'>Acces to multiplayer games <span className='price'
-        >{formData.interval === 'monthly' ? '+2$/mo' : '+10$/yr'}</span></p>
+    
+      <div className={`add-on ${formData.onlineService === 'online service' ? 'active' : ''}`}>
+       <div>
+        <input type="checkbox"   id='online-service-checkbox'className='add-on-checkbox'
+        onClick={()=>handleOnlineService()} checked={formData.onlineService === 'online service' ? true : false} />
+       </div>
+         <div>
+          <span>Online Service</span>
+            <p className='graytext add-on-text'>Acces to multiplayer games <span className='price online-service'>{formData.interval === 'monthly' ? '+1$/mo' : '+10$/yr'}</span></p>
+        </div>
       </div>
+     
       <div className={`add-on ${formData.largerStorage === 'largerStorage' ? 'active' : ''}`}>
-      <input type="checkbox" className='add-on-checkbox' id='larger-storage-checkbox'
-       onClick={()=>handleLargerStorage()} 
-  
-       checked={formData.largerStorage === 'largerStorage' ? true : false}/>Larger Storage
-      <p className='graytext'>Extra 1TB of cloud save <span className='price'>
-      {formData.interval === 'monthly' ? '+12$/mo' : '+20$/yr'}</span></p>
+       <div>
+        <input type="checkbox" className='add-on-checkbox' id='larger-storage-checkbox'
+       onClick={()=>handleLargerStorage()}  checked={formData.largerStorage === 'largerStorage' ? true : false}/>
+       </div>
+         <div>
+          <span>Larger Storage</span>
+          <p className='graytext add-on-text'>Extra 1TB of cloud save <span className='price larger-storage'>{formData.interval === 'monthly' ? '+2$/mo' : '+20$/yr'}</span></p>
+        </div>
       </div>
+     
       <div className={`add-on ${formData.customizableProfile === 'customProfile' ? 'active' : ''}`}>
+        <div>
       <input type="checkbox" className='add-on-checkbox' id='custom-profile-checkbox'
-       onClick={()=>handleCustomProfile()}
-        checked={formData.customizableProfile === 'customProfile' ? true : false} />Customizable profile
-      <p className='graytext'>Extra 1TB of cloud save <span className='price'>
-      {formData.interval === 'monthly' ? '+2$/mo' : '+20$/yr'}</span></p>
+       onClick={()=>handleCustomProfile()}  checked={formData.customizableProfile === 'customProfile' ? true : false} />
+       </div>
+       <div>
+        <span>Customizable profile</span>      
+      <p className='graytext add-on-text'>Custom theme on your profile </p>
+      </div>
+       <div >
+        <div className='price custom-profile'>{formData.interval === 'monthly' ? '+2$/mo' : '+20$/yr'}</div>
+       </div>
       </div>
      </div>
 

@@ -1,4 +1,4 @@
-
+import "./MobileStyles.scss"
 import { FormInput } from "./Subcomponents/FormInput";
 
 export const PersonalInfo2 = (props) => {
@@ -41,16 +41,15 @@ export const PersonalInfo2 = (props) => {
         required:true
     }
   ]
-  const handleSubmit = (e) =>{
-     e.preventDefault();
-  }
+
+  
 
   return (
-   
-    <div className="right-container">
+   <form >
+    <div>
       
-        <h1>Personal Info</h1>
-         <p className="graytext">Please provide your name, email address and phone number</p>
+        <h3>Personal Info</h3>
+         <p id="please-provide" className="graytext">Please provide your name, email address and phone number</p>
         <div className="input-container">
         {input.map((input)=>(
          <FormInput  
@@ -60,10 +59,10 @@ export const PersonalInfo2 = (props) => {
         ))}
     
      
-    
+   
     </div>
-    
+
     </div>
- 
+    </form>
   )
-} 
+        }

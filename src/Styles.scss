@@ -1,3 +1,4 @@
+
 body{
   width: 100%;
   height: 100%;
@@ -56,7 +57,6 @@ body{
     height: 35px;
     color: hsl(231, 100%, 99%);
     background-color: inherit;
-    cursor: pointer;
     position: relative;
     font-family: inherit;
     border:  1px solid white;
@@ -86,22 +86,28 @@ body{
     position: absolute;
     background-color: hsl(214, 93%, 18%);
     color: white;
-    margin-top:210px ;
-    margin-left: 400px;  
+    margin-top:180px ;
+    margin-left: 700px; 
     cursor: pointer;
     padding: 10px 15px 10px 15px;
     border-radius: 8px;
-    
+    width: 95px;
+  }
+  footer{
+    position: absolute;
+    display: inline;
+    width: 500px;
   }
 .prev-step{
     display: block;
-    position: absolute;
+    position: absolute !important;
     background-color: inherit;
     color:  hsl(231, 11%, 63%);
-    margin-top:220px ;
-    margin-left: 100px;  
+    margin-top:180px ;
+    margin-left: 350px;  
     cursor: pointer;
     border: none;
+    padding: 10px 15px 10px 15px;
 }
 .prev-step:hover{
   color:hsl(214, 93%, 18%) ;
@@ -112,8 +118,8 @@ body{
   position: absolute;
   background-color:hsl(243, 100%, 62%);
   color: white;
-  margin-top:210px ;
-  margin-left: 400px;  
+  margin-top:180px ;
+  margin-left: 700px; 
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   border-radius: 8px;
@@ -156,7 +162,10 @@ body{
   border-radius: 1em;
 }
 .interval-switch{
-  margin-left: 110px;
+  position:relative;
+  display: block;
+  margin-left: 120px;
+
 }
 .monthly-yearly-container {
   position: absolute;
@@ -180,11 +189,17 @@ body{
 
 .add-on{
   border: 1px solid gray;
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
-  display: -ms-flexbox;
   border-radius: 8px;
   align-items: center;
+
+  display: flex;
+}
+.add-on-text{
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .add-on.active{
   border: 2px solid gray;
@@ -199,12 +214,42 @@ body{
 .price{
   color:   hsl(243, 100%, 62%);
 }
-.doublecheck-container{
-  border: 1px solid black;
-  width: 60%;
-  margin-left:20% ;
+.price.larger-storage{
+  color:   hsl(243, 100%, 62%);
+  position: relative;
+  margin-left: 205px;
 }
-/* The switch - the box around the slider */
+.price.online-service{
+  margin-left: 183px;
+}
+.price.custom-profile{
+  margin-left: 173px;
+}
+.price.total{
+  margin-left: 150px;
+}
+.doublecheck-container{
+  border: 1px transparent white;
+  width: 60%;
+  margin-left:15px ;
+  background-color:  hsl(231, 100%, 99%);
+  border-radius: 8px;
+}
+table{
+  border-collapse: collapse
+}
+.selected-plan{
+  border-top: 1px solid hsl(229, 24%, 87%);
+}
+.change{
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+  text-decoration: underline;
+}
+.change:hover{
+  cursor: pointer;
+  color:   hsl(243, 100%, 62%);
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -275,13 +320,6 @@ input:checked + .slider:before {
 .thanksTxt{
   margin-left: 50px;
   margin-right: 50px;
-}
-.errorMessage{
-  font-size: 12px;
-  color: red;
-  margin-left: 180px;
- //display: none;
- border: none  !important;
 }
 
 span{
