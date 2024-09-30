@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf dist && rm -rf .vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
+    "clean": "del /q /f dist node_modules",
+    "build": "npm run clean && vite build",
     "deploy": "gh-pages -d dist",
     "dev": "vite", 
     "lint": "eslint .",
