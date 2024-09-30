@@ -7,6 +7,7 @@ import {ThankYou} from "./ThankYou"
 import { Sidebar } from "./Sidebar";
 import {PersonalInfo2} from "./PersonalInfo2"
 import { SidebarMobile } from "./SidebarMobile";
+import {MobileSideBarHook} from "./MobileSideBarHook"
 
 export const MultiStepForm = () => {
     const [step, setStep] = useState(1);
@@ -14,14 +15,9 @@ export const MultiStepForm = () => {
   ;
   const prevStep = () => {step > 1 ? setStep(step - 1): null};
  
-  window.addEventListener('resize', handleResize);
- 
-  const handleResize = () =>{
-     const newWidth = window.innerWidth
-     const newHeight = window.innerHeight
-     console.log(newHeight + newWidth)
 
-}
+  const isMobileSidebarVisible = MobileSideBarHook();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,7 +49,7 @@ export const MultiStepForm = () => {
       <div className="full-container">
      
   
-     {window.innerWidth< 1000 && <SidebarMobile step={step} nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} setStep={{setStep}}/>}
+     {isMobileSidebarVisible  && <SidebarMobile step={step} nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} setStep={{setStep}}/>}
           {window.innerWidth> 1000 && <Sidebar step={step} nextStep={nextStep} prevStep={prevStep} formData={formData} handleChange={handleChange} setFormData={setFormData} setStep={{setStep}}/>}
        
       

@@ -38,9 +38,12 @@ const handleOnlineService = () =>{
         <input type="checkbox"   id='online-service-checkbox'className='add-on-checkbox'
         onClick={()=>handleOnlineService()} checked={formData.onlineService === 'online service' ? true : false} />
        </div>
-         <div>
+       <div>
           <span>Online Service</span>
-            <p className='graytext add-on-text'>Acces to multiplayer games <span className='price online-service'>{formData.interval === 'monthly' ? '+1$/mo' : '+10$/yr'}</span></p>
+            <p className='graytext add-on-text'>Access to multiplayer games </p>
+        </div>
+        <div>
+        <span className='price online-service'>{formData.interval === 'monthly' ? '+1$/mo' : '+10$/yr'}</span>
         </div>
       </div>
      
@@ -51,7 +54,10 @@ const handleOnlineService = () =>{
        </div>
          <div>
           <span>Larger Storage</span>
-          <p className='graytext add-on-text'>Extra 1TB of cloud save <span className='price larger-storage'>{formData.interval === 'monthly' ? '+2$/mo' : '+20$/yr'}</span></p>
+            <p className='graytext add-on-text'>Extra 1TB of cloud save </p>
+        </div>
+        <div>
+        <span className='price larger-storage'>{formData.interval === 'monthly' ? '+2$/mo' : '+20$/yr'}</span>
         </div>
       </div>
      
