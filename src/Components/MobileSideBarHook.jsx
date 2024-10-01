@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function MobileSideBarHook() {
-  const [isMobileSidebarVisible, setIsMobileSidebarVisible] = useState(false);
+  const [isMobileSidebarVisible, setIsMobileSidebarVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {

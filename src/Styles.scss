@@ -356,3 +356,6 @@ input:invalid[focused="true"]{
 input:invalid[focused="true"] ~ .errorMessage{
   display: block;
 }
+#mobile-button{
+  display: none;
+}
