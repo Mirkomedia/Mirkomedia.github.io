@@ -1,0 +1,361 @@
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(231, 100%, 99%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-container{
+    display: block;
+    padding: 10px;
+    border: 1px solid white;
+    min-width: 250px;
+    min-height: 500px;
+    margin: 10px;
+    background-image: url('./images/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: hsl(229, 24%, 87%);
+    font-family: url('/assets/fonts/Ubuntu-Bold.ttf');
+}
+.full-container{
+    display: inline-flex;
+    width: 880px;
+    height: 550px;
+    border: 1px solid white;
+    align-items: center;
+    background-color: white; 
+    border-radius: 10px;
+    margin: 50px;
+}
+.select-step{
+    display: block;
+    position: relative;
+    top: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+   
+}
+.step-name{
+    color: white;
+    margin-left: 50px;
+    margin-top: 0px;
+    padding: 1px;
+}
+
+.round-button {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    min-width: 15px;
+    min-height: 15px;
+    width: 35px;
+    height: 35px;
+    color: hsl(231, 100%, 99%);
+    background-color: inherit;
+    position: relative;
+    font-family: inherit;
+    border:  1px solid white;
+  }
+  .round-button.active{
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    font-weight: 600;
+  }
+  .right-container{
+    width: 530px ;
+    height: 550px;
+    border: 1px solid white;
+    display: block;
+    align-items: center ;
+    margin-left: 50px;
+    text-align: left;
+
+  }
+  
+  .thanks{
+    text-align: center ;
+    align-items: center ;
+  }
+  .next-step{
+    display: block;
+    position: absolute;
+    background-color: hsl(214, 93%, 18%);
+    color: white;
+    margin-top:180px ;
+    margin-left: 700px; 
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    width: 95px;
+  }
+  footer{
+    position: absolute;
+    display: inline;
+    width: 500px;
+  }
+.prev-step{
+    display: block;
+    position: absolute !important;
+    background-color: inherit;
+    color:  hsl(231, 11%, 63%);
+    margin-top:180px ;
+    margin-left: 350px;  
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px 10px 15px;
+}
+.prev-step:hover{
+  color:hsl(214, 93%, 18%) ;
+  font-weight: 600
+}
+.confirm{
+  display: block;
+  position: absolute;
+  background-color:hsl(243, 100%, 62%);
+  color: white;
+  margin-top:180px ;
+  margin-left: 700px; 
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  
+}
+
+  .plan-container{
+    display: inline-flex;
+    text-align: left;
+    border: 1px transparent white;
+    margin-top: 20px;
+    align-items: center;
+   
+
+  }
+.plan-box{
+  width: 100px;
+  height: 150px;
+  display: block;
+  position: relative;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+ 
+}
+.plan-box:hover{
+  border: 2px solid gray;
+}
+.plan-box.active{
+  border: 2px solid gray
+}
+.monthly-yearly {
+  appearance: none;
+  display: inline-block;
+  font-size: 20px; /* 1 */
+  height: 1em;
+  width: 2em;
+  background: #BDB9A6;
+  border-radius: 1em;
+}
+.interval-switch{
+  position:relative;
+  display: block;
+  margin-left: 120px;
+
+}
+.monthly-yearly-container {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.add-ons-container{
+  display:block;
+  position: relative;
+  align-items: left;
+  text-align: left;
+}
+.graytext{
+  color: hsl(231, 11%, 63%);
+  display: block;
+  font-size: 16px;
+}
+
+.add-on{
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  align-items: center;
+
+  display: flex;
+}
+.add-on-text{
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.add-on.active{
+  border: 2px solid gray;
+}
+.add-on-checkbox{
+  display: relative;
+  padding: 15px;
+  margin-top: 5px;
+  height: 18px;
+  width: 18px;
+}
+.price{
+  color:   hsl(243, 100%, 62%);
+}
+.price.larger-storage{
+  
+  margin-left: 205px;
+}
+.price.online-service{
+  margin-left: 183px;
+}
+.price.custom-profile{
+  margin-left: 173px;
+}
+.price.total{
+  margin-left: 150px;
+}
+.doublecheck-container{
+  border: 1px transparent white;
+  width: 60%;
+  margin-left:15px ;
+  background-color:  hsl(231, 100%, 99%);
+  border-radius: 8px;
+}
+table{
+  border-collapse: collapse
+}
+.selected-plan{
+  border-top: 1px solid hsl(229, 24%, 87%);
+}
+.change{
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+  text-decoration: underline;
+}
+.change:hover{
+  cursor: pointer;
+  color:   hsl(243, 100%, 62%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  margin-top: 50px;
+  margin-right: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:hsl(243, 100%, 62%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.thanksIcon{
+  margin-top: 150px;
+  
+}
+.thanksTxt{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+span{
+  margin-left: 18px;
+}
+.formInput{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input{
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.errorMessage{
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+  position: absolute;
+  margin-left: 295px;
+
+}
+.input-container{
+  margin-top: 35px;
+}
+input:invalid[focused="true"]{
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ .errorMessage{
+  display: block;
+}
+#mobile-button{
+  display: none;
+}
