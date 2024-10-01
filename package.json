@@ -3,10 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Mirkomedia.github.com/Mirkomedia.github.io",
   "scripts": {
-    "clean": "del /q /f dist node_modules",
-    "build": "npm run clean && vite build",
-    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d-build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
