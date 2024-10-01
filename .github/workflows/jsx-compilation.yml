@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
       
     - name: Install dependencies
-      run: npm@5
+      run: npm install
       
     - name: Transpile JSX
       run: npx babel src --out-dir dist
