@@ -148,6 +148,7 @@ body{
 }
 .plan-box:hover{
   border: 2px solid gray;
+  cursor: pointer;
 }
 .plan-box.active{
   border: 2px solid gray
@@ -193,23 +194,29 @@ body{
   margin: 10px;
   border-radius: 8px;
   align-items: center;
-
   display: flex;
+
+  &.active {
+    border: 2px solid gray;
+  }
+  &:hover{
+    cursor: pointer;
+  }
 }
 .add-on-text{
   margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.add-on.active{
-  border: 2px solid gray;
-}
+
 .add-on-checkbox{
   display: relative;
   padding: 15px;
   margin-top: 5px;
   height: 18px;
   width: 18px;
+  & :hover{
+    cursor: pointer;}
 }
 .price{
   color:   hsl(243, 100%, 62%);
