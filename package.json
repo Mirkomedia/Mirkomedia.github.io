@@ -7,7 +7,7 @@
     "clean": "del /q /f dist node_modules",
     "build": "npm run clean && vite build",
     "deploy": "gh-pages -d dist",
-    "dev": "vite", 
+    "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -16,6 +16,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
